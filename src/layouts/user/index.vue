@@ -2,12 +2,18 @@
   <q-layout view="lHh LpR fFf">
     <q-header class="bg-purple-500 text-white">
       <q-toolbar>
-        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" />
+        <q-btn
+          dense
+          flat
+          round
+          icon="menu"
+          @click="toggleLeftDrawer"
+          v-if="$q.screen.lt.md"
+        />
 
         <q-toolbar-title>
-          <q-avatar>
-            <!-- <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" /> -->
-          </q-avatar>
+          <!-- <q-avatar>
+          </q-avatar> -->
           Title
         </q-toolbar-title>
       </q-toolbar>
@@ -18,8 +24,20 @@
       v-model="leftDrawerOpen"
       side="left"
       class="bg-gray-100"
+      :mini="mini"
+      @click.capture="drawerClick"
     >
       <!-- drawer content -->
+      <div class="q-mini-drawer-hide absolute top-1/2 -right-4">
+        <q-btn
+          dense
+          round
+          unelevated
+          icon="chevron_left"
+          @click="mini = true"
+          style="background: white; color: purple; border: solid purple 0.5px"
+        />
+      </div>
       <sidebar></sidebar>
     </q-drawer>
 
@@ -33,10 +51,17 @@
 
 <script setup>
 import { ref } from "vue";
+import { useQuasar } from "quasar";
 import sidebar from "./components/sidebar.vue";
 const leftDrawerOpen = ref(false);
+const mini = ref(false);
+const $q = useQuasar();
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
+}
+function drawerClick(e) {
+  mini.value = false;
+  // e.stopPropagation();
 }
 // export default {
 //   setup() {

@@ -1,8 +1,11 @@
 <template>
   <div class="max-w-xs">
-    <div class="px-5 py-3 font-bold uppercase text-xl text-purple-500">
+    <div
+      class="h-12 p-3 font-bold uppercase text-xl text-purple-500 q-mini-drawer-hide"
+    >
       Your Company Name
     </div>
+    <div class="h-12 w-full q-mini-drawer-only"></div>
     <q-list class="rounded-borders text-purple-600">
       <q-item
         clickable
