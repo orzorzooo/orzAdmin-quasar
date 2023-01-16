@@ -58,6 +58,7 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { userStore } from "@/stores/user";
+import { useQuasar } from "quasar";
 const email = ref(""),
   emailRef = ref(""),
   password = ref(""),
@@ -66,6 +67,8 @@ const email = ref(""),
 const isPwd = ref(true);
 const router = useRouter();
 const user = userStore();
+const $q = useQuasar();
+
 async function login() {
   emailRef.value.validate();
   passwordRef.value.validate();
@@ -74,7 +77,17 @@ async function login() {
   }
   const login = await user.login({ email, password });
   console.log(login);
-  if (!login) return;
+  if (!login) {
+    $q.notify({
+      message: "登入錯誤",
+      type: "negative",
+      position: "top",
+      classes: "notify",
+      timeout: 1500,
+      // color: "red",
+    });
+    return;
+  }
   router.push({ name: "UserIndex" });
 
   // router.push({ name: "UserIndex" });
@@ -85,3 +98,8 @@ function isValidEmail(val) {
   return emailPattern.test(val) || "email 格式錯誤";
 }
 </script>
+<style>
+.notify {
+  transition: 0.3s ease all;
+}
+</style>
