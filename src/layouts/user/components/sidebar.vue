@@ -17,7 +17,7 @@
 
         <q-item-section>Inbox</q-item-section>
       </q-item>
-
+      <q-space></q-space>
       <q-item
         clickable
         v-ripple
@@ -75,12 +75,36 @@
 
         <q-item-section>Help</q-item-section>
       </q-item>
+      <div class="absolute-bottom">
+        <q-item clickable v-ripple>
+          <q-menu fit class="bg-gray-200" square auto-close>
+            <q-list>
+              <q-item clickable @click="logout">
+                <q-item-section>Log out</q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+          <q-item-section avatar>
+            <q-icon name="settings" />
+          </q-item-section>
+          <q-item-section> {{ user.info.first_name }}</q-item-section>
+        </q-item>
+      </div>
     </q-list>
   </div>
 </template>
 <script setup>
+import { userStore } from "@/stores/user";
+import { useRouter } from "vue-router";
 import { ref } from "vue";
 const link = ref("inbox");
+const user = userStore();
+const router = useRouter();
+async function logout() {
+  const logout = await user.logout();
+  if (!logout) return;
+  router.push({ name: "Login" });
+}
 </script>
 <style scoped>
 .my-menu-link {
