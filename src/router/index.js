@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { userStore } from "@/stores/user";
 // import HomeView from '../views/HomeView.vue'
 import Default from "@/layouts/default.vue";
 import LayoutUser from "@/layouts/user/index.vue";
@@ -14,22 +15,15 @@ const router = createRouter({
         {
           path: "",
           name: "Login",
-          component: () => import(/* webpackChunkName: "home" */ "@/views/Login.vue"),
+          component: () =>
+            import(/* webpackChunkName: "home" */ "@/views/Login.vue"),
         },
       ],
     },
-    {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
-    },
+
     {
       path: "/user",
       component: LayoutUser,
-      name: "UserIndex",
       children: [
         {
           path: "",
@@ -39,6 +33,18 @@ const router = createRouter({
       ],
     },
   ],
+});
+
+router.beforeEach(async (to, from) => {
+  const user = userStore();
+  const auth = await user.authenticated();
+  if (to.name !== "Login" && !auth) {
+    console.log("router guard fail");
+    return { name: "Login" };
+  } else if (to.name == "Login" && auth) {
+    return { name: "UserIndex" };
+  }
+  // return false;
 });
 
 export default router;
