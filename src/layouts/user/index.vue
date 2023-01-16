@@ -13,13 +13,20 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer show-if-above v-model="leftDrawerOpen" side="left" class="bg-gray-100">
+    <q-drawer
+      show-if-above
+      v-model="leftDrawerOpen"
+      side="left"
+      class="bg-gray-100"
+    >
       <!-- drawer content -->
       <sidebar></sidebar>
     </q-drawer>
 
     <q-page-container>
-      <RouterView />
+      <div class="p-5">
+        <RouterView />
+      </div>
     </q-page-container>
   </q-layout>
 </template>

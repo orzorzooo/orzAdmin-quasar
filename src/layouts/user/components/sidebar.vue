@@ -17,7 +17,6 @@
 
         <q-item-section>Inbox</q-item-section>
       </q-item>
-      <q-space></q-space>
       <q-item
         clickable
         v-ripple
@@ -76,6 +75,7 @@
         <q-item-section>Help</q-item-section>
       </q-item>
       <div class="absolute-bottom">
+        <q-separator spaced />
         <q-item clickable v-ripple>
           <q-menu fit class="bg-gray-200" square auto-close>
             <q-list>
