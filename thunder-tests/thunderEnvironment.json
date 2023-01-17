@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "ef2aa6a4-98ac-4af1-b391-6eb59900bdbd",
+    "name": "apdc.api.apdc.com.tw",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2023-01-17T03:41:14.769Z",
+    "modified": "2023-01-17T03:41:14.769Z",
+    "data": [
+      {
+        "name": "url",
+        "value": "https://apdc.api.apdc.com.tw"
+      }
+    ]
+  }
+]
