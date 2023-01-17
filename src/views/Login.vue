@@ -1,6 +1,5 @@
 <template>
   <div class="h-screen">
-    {{ user.counter }}
     <div class="row items-center h-full">
       <div class="col-12 col-md-6 p-3">
         <div class="text-3xl font-bold text-white mb-5">Welcome</div>
