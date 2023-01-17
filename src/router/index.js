@@ -15,8 +15,7 @@ const router = createRouter({
         {
           path: "",
           name: "Login",
-          component: () =>
-            import(/* webpackChunkName: "home" */ "@/views/Login.vue"),
+          component: () => import(/* webpackChunkName: "home" */ "@/views/Login.vue"),
         },
       ],
     },
@@ -30,13 +29,19 @@ const router = createRouter({
           path: "",
           component: UserIndex,
           name: "UserIndex",
-          meta: { lable: "首頁", icon: "home" },
+          meta: { label: "首頁", icon: "home" },
         },
         {
           path: "example",
           component: () => import("@/views/user/example/index.vue"),
           name: "Example",
-          meta: { lable: "範例", icon: "info" },
+          meta: { label: "範例", icon: "info" },
+        },
+        {
+          path: "example/+",
+          component: () => import("@/views/user/example/create.vue"),
+          name: "ExampleCreate",
+          meta: { label: "範例", icon: "info", hide: true },
         },
       ],
     },
