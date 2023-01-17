@@ -8,10 +8,24 @@
     <div class="h-12 w-full q-mini-drawer-only"></div>
     <q-list class="rounded-borders text-purple-600">
       <q-item
+        v-for="(item, i) of userRoutes"
+        clickable
+        :active="route.name === item.name"
+        active-class="my-menu-link"
+        @click="router.push({ name: item.name })"
+      >
+        <q-item-section avatar>
+          <q-icon :name="item.meta.icon" />
+        </q-item-section>
+        <q-item-section>
+          {{ item.meta.lable }}
+        </q-item-section>
+      </q-item>
+
+      <q-item
         clickable
         v-ripple
         :active="link === 'inbox'"
-        @click="link = 'inbox'"
         active-class="my-menu-link"
       >
         <q-item-section avatar>
@@ -24,7 +38,6 @@
         clickable
         v-ripple
         :active="link === 'outbox'"
-        @click="link = 'outbox'"
         active-class="my-menu-link"
       >
         <q-item-section avatar>
@@ -38,7 +51,6 @@
         clickable
         v-ripple
         :active="link === 'trash'"
-        @click="link = 'trash'"
         active-class="my-menu-link"
       >
         <q-item-section avatar>
@@ -54,7 +66,6 @@
         clickable
         v-ripple
         :active="link === 'settings'"
-        @click="link = 'settings'"
         active-class="my-menu-link"
       >
         <q-item-section avatar>
@@ -68,7 +79,6 @@
         clickable
         v-ripple
         :active="link === 'help'"
-        @click="link = 'help'"
         active-class="my-menu-link"
       >
         <q-item-section avatar>
@@ -98,16 +108,20 @@
 </template>
 <script setup>
 import { userStore } from "@/stores/user";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import { ref } from "vue";
-const link = ref("inbox");
+const link = ref("");
 const user = userStore();
 const router = useRouter();
+const route = useRoute();
 async function logout() {
   const logout = await user.logout();
   if (!logout) return;
   router.push({ name: "Login" });
 }
+
+const [userRoute] = router.options.routes.filter((item) => item.name == "user");
+const userRoutes = userRoute.children;
 </script>
 <style scoped>
 .my-menu-link {
