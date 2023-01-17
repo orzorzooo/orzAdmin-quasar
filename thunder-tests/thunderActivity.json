@@ -1,347 +1,36 @@
 [
   {
-    "_id": "37725efa-2101-4f37-ade0-c12cd4a863b0",
+    "_id": "eb7ddd94-7426-4f18-a4dd-1da97b4ea2e8",
     "colId": "history",
     "containerId": "",
-    "name": "{{url}}/collection",
-    "url": "{{url}}/collection",
+    "name": "{{url}}/items/foodar",
+    "url": "{{url}}/items/foodar",
     "method": "GET",
     "sortNum": 0,
-    "created": "2023-01-17T03:41:59.379Z",
-    "modified": "2023-01-17T03:41:59.379Z",
+    "created": "2023-01-17T13:43:51.706Z",
+    "modified": "2023-01-17T13:43:51.706Z",
     "headers": [],
     "params": [],
     "tests": []
   },
   {
-    "_id": "a868799e-52ac-4ccd-a99d-184e684713e9",
+    "_id": "773e9418-3a30-41b9-be93-43040fc3217a",
     "colId": "history",
     "containerId": "",
-    "name": "{{url}}/collections",
-    "url": "{{url}}/collections",
+    "name": "{{url}}/items/foodar?meta=total_count",
+    "url": "{{url}}/items/foodar?meta=total_count",
     "method": "GET",
     "sortNum": 0,
-    "created": "2023-01-17T03:42:11.317Z",
-    "modified": "2023-01-17T08:11:11.429Z",
-    "headers": [],
-    "params": [],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "a902bdbe-417e-467d-a8e0-99aed8d33a1f",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields/projects",
-    "url": "{{url}}/fields/projects",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:02:07.420Z",
-    "modified": "2023-01-17T08:02:24.804Z",
-    "headers": [],
-    "params": [],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "9b92e5b7-c6d3-4d50-928e-30161ce37936",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields/projects?fields=schema",
-    "url": "{{url}}/fields/projects?fields=schema",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:05:46.698Z",
-    "modified": "2023-01-17T08:05:46.698Z",
+    "created": "2023-01-17T13:44:56.501Z",
+    "modified": "2023-01-17T13:44:56.501Z",
     "headers": [],
     "params": [
       {
-        "name": "fields",
-        "value": "schema",
+        "name": "meta",
+        "value": "total_count",
         "isPath": false
       }
     ],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "831e8d58-3933-4bfe-b0de-edc3434de585",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields/projects?fields=*.schema.name",
-    "url": "{{url}}/fields/projects?fields=*.schema.name",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:06:00.509Z",
-    "modified": "2023-01-17T08:06:00.509Z",
-    "headers": [],
-    "params": [
-      {
-        "name": "fields",
-        "value": "*.schema.name",
-        "isPath": false
-      }
-    ],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "67412e15-9bb5-4c20-8c99-1fbd24f6424d",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields/projects?fields=collection",
-    "url": "{{url}}/fields/projects?fields=collection",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:06:25.519Z",
-    "modified": "2023-01-17T08:06:25.519Z",
-    "headers": [],
-    "params": [
-      {
-        "name": "fields",
-        "value": "collection",
-        "isPath": false
-      }
-    ],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "e70c938c-d866-4096-8e06-e05acf66bcd1",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields/items/projects",
-    "url": "{{url}}/fields/items/projects",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:07:25.241Z",
-    "modified": "2023-01-17T08:07:25.241Z",
-    "headers": [],
-    "params": [],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "c79ff526-d0f3-471a-b966-8fd30b9bdf07",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/items/projects",
-    "url": "{{url}}/items/projects",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:07:34.973Z",
-    "modified": "2023-01-17T08:07:34.973Z",
-    "headers": [],
-    "params": [],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "e76c250c-7093-4300-a177-121cc1bc5f74",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/items/projects?fields=name",
-    "url": "{{url}}/items/projects?fields=name",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:07:47.018Z",
-    "modified": "2023-01-17T08:07:47.018Z",
-    "headers": [],
-    "params": [
-      {
-        "name": "fields",
-        "value": "name",
-        "isPath": false
-      }
-    ],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "77655028-3def-44d2-a4a2-374b29b4ffa2",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields",
-    "url": "{{url}}/fields",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:07:57.564Z",
-    "modified": "2023-01-17T08:07:57.564Z",
-    "headers": [],
-    "params": [],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "400b45da-1d3d-4134-bd39-a8730d628825",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields/projects?fileds=collection",
-    "url": "{{url}}/fields/projects?fileds=collection",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:08:44.383Z",
-    "modified": "2023-01-17T08:08:44.383Z",
-    "headers": [],
-    "params": [
-      {
-        "name": "fileds",
-        "value": "collection",
-        "isPath": false
-      }
-    ],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "51529b76-32de-41e7-babc-94bbb62e2f0e",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields/projects?fileds=meta",
-    "url": "{{url}}/fields/projects?fileds=meta",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:08:50.469Z",
-    "modified": "2023-01-17T08:08:50.469Z",
-    "headers": [],
-    "params": [
-      {
-        "name": "fileds",
-        "value": "meta",
-        "isPath": false
-      }
-    ],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "aa21f81e-15dd-4bf7-bca4-15325f468e6e",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields/projects/name?fileds=meta",
-    "url": "{{url}}/fields/projects/name?fileds=meta",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:09:04.352Z",
-    "modified": "2023-01-17T08:09:04.352Z",
-    "headers": [],
-    "params": [
-      {
-        "name": "fileds",
-        "value": "meta",
-        "isPath": false
-      }
-    ],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "1030248c-ff08-43fd-812b-650b656fa192",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields/projects/name",
-    "url": "{{url}}/fields/projects/name",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:09:13.903Z",
-    "modified": "2023-01-17T08:09:27.368Z",
-    "headers": [],
-    "params": [
-      {
-        "name": "fileds",
-        "value": "field",
-        "isDisabled": true,
-        "isPath": false
-      }
-    ],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "2641f100-d44e-4f27-839d-6eab2b373d57",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields/projects/name?fileds=field",
-    "url": "{{url}}/fields/projects/name?fileds=field",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:09:51.323Z",
-    "modified": "2023-01-17T08:09:51.323Z",
-    "headers": [],
-    "params": [
-      {
-        "name": "fileds",
-        "value": "field",
-        "isPath": false
-      }
-    ],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
-    "tests": []
-  },
-  {
-    "_id": "cce6b539-e076-420c-ba72-1cf262f19762",
-    "colId": "history",
-    "containerId": "",
-    "name": "{{url}}/fields/projects/?fileds=field",
-    "url": "{{url}}/fields/projects/?fileds=field",
-    "method": "GET",
-    "sortNum": 0,
-    "created": "2023-01-17T08:10:15.028Z",
-    "modified": "2023-01-17T08:10:15.028Z",
-    "headers": [],
-    "params": [
-      {
-        "name": "fileds",
-        "value": "field",
-        "isPath": false
-      }
-    ],
-    "auth": {
-      "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExZmQxM2YzLTI1MDUtNGMzYS1hYTMxLTFiY2E3MWQyODM4MSIsInJvbGUiOiIxOWVhNTA4OS0xMDQzLTQ3NTYtOWNlOS1iY2FmM2VlMWU5NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjEsImlhdCI6MTY3Mzk0MTQ4NCwiZXhwIjoxNjczOTQ1MDg0LCJpc3MiOiJkaXJlY3R1cyJ9.crUFzg5Q6HW-Ea5tsxrg1jYCW_vMvnPUDpWfN_34ZSE"
-    },
     "tests": []
   }
 ]

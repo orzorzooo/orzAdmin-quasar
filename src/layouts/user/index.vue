@@ -1,23 +1,19 @@
 <template>
   <q-layout view="lHh LpR fFf">
-    <q-header class="bg-purple-500 text-white">
+    <!-- <q-header class="bg-white text-purple-600">
       <q-toolbar>
-        <q-btn
-          dense
-          flat
-          round
-          icon="menu"
-          @click="toggleLeftDrawer"
-          v-if="$q.screen.lt.md"
-        />
+        <q-btn dense flat round icon="menu" @click="toggleLeftDrawer" v-if="$q.screen.lt.md" />
 
         <q-toolbar-title>
-          <!-- <q-avatar>
-          </q-avatar> -->
-          Title
+          <div class="q-pa-md">
+            <div class="text-gray-500 text-xs uppercase">{{ route.name }}</div>
+            <div>
+              {{ route.meta.label }}
+            </div>
+          </div>
         </q-toolbar-title>
       </q-toolbar>
-    </q-header>
+    </q-header> -->
 
     <q-drawer
       show-if-above
@@ -52,10 +48,12 @@
 <script setup>
 import { ref } from "vue";
 import { useQuasar } from "quasar";
+import { useRoute } from "vue-router";
 import sidebar from "./components/sidebar.vue";
 const leftDrawerOpen = ref(false);
 const mini = ref(false);
 const $q = useQuasar();
+const route = useRoute();
 function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
