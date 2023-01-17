@@ -24,11 +24,19 @@ const router = createRouter({
     {
       path: "/user",
       component: LayoutUser,
+      name: "user",
       children: [
         {
           path: "",
           component: UserIndex,
           name: "UserIndex",
+          meta: { lable: "首頁", icon: "home" },
+        },
+        {
+          path: "example",
+          component: () => import("@/views/user/example/index.vue"),
+          name: "Example",
+          meta: { lable: "範例", icon: "info" },
         },
       ],
     },
@@ -40,6 +48,7 @@ router.beforeEach(async (to, from) => {
   const auth = await user.authenticated();
   if (to.name !== "Login" && !auth) {
     console.log("router guard fail");
+    user.removeToken();
     return { name: "Login" };
   } else if (to.name == "Login" && auth) {
     return { name: "UserIndex" };
