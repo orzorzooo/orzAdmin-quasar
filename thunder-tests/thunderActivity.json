@@ -52,16 +52,21 @@
     "colId": "history",
     "containerId": "",
     "name": "{{url}}/permissions",
-    "url": "{{url}}/permissions",
-    "method": "GET",
+    "url": "{{url}}/items/example",
+    "method": "DELETE",
     "sortNum": 0,
     "created": "2023-01-18T01:31:50.595Z",
-    "modified": "2023-01-18T01:32:05.802Z",
+    "modified": "2023-01-18T04:19:55.662Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "[\n  \"ddbd0e2c-52e8-4a36-8843-7f50d99f10f0\"\n  ]",
+      "form": []
+    },
     "auth": {
       "type": "bearer",
-      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjODMyZTE5LTM0MGUtNDA1YS05M2JiLTQ4NjJjM2ZkZTYwNSIsInJvbGUiOiJlNjMwOWE5ZS0wZjE4LTQ3MTUtYWFhZi0zMDM4M2M4MGQ3NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjAsImlhdCI6MTY3NDAwNDA5NiwiZXhwIjoxNjc0MDA3Njk2LCJpc3MiOiJkaXJlY3R1cyJ9.bXyiClP2lUJn5c42i4hp3u74dlG6naxA2OypflvXfSY"
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjODMyZTE5LTM0MGUtNDA1YS05M2JiLTQ4NjJjM2ZkZTYwNSIsInJvbGUiOiJlNjMwOWE5ZS0wZjE4LTQ3MTUtYWFhZi0zMDM4M2M4MGQ3NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjAsImlhdCI6MTY3NDAxMTU5MCwiZXhwIjoxNjc0MDE1MTkwLCJpc3MiOiJkaXJlY3R1cyJ9.g1D8jPSOdu3fn-hIlYS1ZVSeHMnkhQmTtAAEeJcYM5Q"
     },
     "tests": []
   }
