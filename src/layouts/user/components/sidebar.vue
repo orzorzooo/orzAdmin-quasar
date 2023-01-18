@@ -1,13 +1,17 @@
 <template>
   <div class="max-w-xs">
-    <div class="h-12 p-3 font-bold uppercase text-xl text-purple-500 q-mini-drawer-hide">Your Company Name</div>
+    <div
+      class="h-12 p-3 font-bold uppercase text-xl text-purple-500 q-mini-drawer-hide"
+    >
+      Your Company Name
+    </div>
     <div class="h-12 w-full q-mini-drawer-only"></div>
     <q-list class="rounded-borders text-purple-600">
       <template v-for="(item, i) of userRoutes">
         <q-item
           v-if="!item.meta.hide"
           clickable
-          :active="route.name === item.name"
+          :active="route.name === item.name || route.meta.alias == item.name"
           active-class="my-menu-link"
           @click="router.push({ name: item.name })"
         >
@@ -20,14 +24,24 @@
         </q-item>
       </template>
 
-      <q-item clickable v-ripple :active="link === 'inbox'" active-class="my-menu-link">
+      <q-item
+        clickable
+        v-ripple
+        :active="link === 'inbox'"
+        active-class="my-menu-link"
+      >
         <q-item-section avatar>
           <q-icon name="inbox" />
         </q-item-section>
 
         <q-item-section>Inbox</q-item-section>
       </q-item>
-      <q-item clickable v-ripple :active="link === 'outbox'" active-class="my-menu-link">
+      <q-item
+        clickable
+        v-ripple
+        :active="link === 'outbox'"
+        active-class="my-menu-link"
+      >
         <q-item-section avatar>
           <q-icon name="send" />
         </q-item-section>
@@ -35,7 +49,12 @@
         <q-item-section>Outbox</q-item-section>
       </q-item>
 
-      <q-item clickable v-ripple :active="link === 'trash'" active-class="my-menu-link">
+      <q-item
+        clickable
+        v-ripple
+        :active="link === 'trash'"
+        active-class="my-menu-link"
+      >
         <q-item-section avatar>
           <q-icon name="delete" />
         </q-item-section>
@@ -45,7 +64,12 @@
 
       <q-separator spaced />
 
-      <q-item clickable v-ripple :active="link === 'settings'" active-class="my-menu-link">
+      <q-item
+        clickable
+        v-ripple
+        :active="link === 'settings'"
+        active-class="my-menu-link"
+      >
         <q-item-section avatar>
           <q-icon name="settings" />
         </q-item-section>
@@ -53,7 +77,12 @@
         <q-item-section>Settings</q-item-section>
       </q-item>
 
-      <q-item clickable v-ripple :active="link === 'help'" active-class="my-menu-link">
+      <q-item
+        clickable
+        v-ripple
+        :active="link === 'help'"
+        active-class="my-menu-link"
+      >
         <q-item-section avatar>
           <q-icon name="help" />
         </q-item-section>
