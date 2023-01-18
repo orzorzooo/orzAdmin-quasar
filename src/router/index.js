@@ -15,7 +15,8 @@ const router = createRouter({
         {
           path: "",
           name: "Login",
-          component: () => import(/* webpackChunkName: "home" */ "@/views/Login.vue"),
+          component: () =>
+            import(/* webpackChunkName: "home" */ "@/views/Login.vue"),
         },
       ],
     },
@@ -41,7 +42,7 @@ const router = createRouter({
           path: "example/+",
           component: () => import("@/views/user/example/create.vue"),
           name: "ExampleCreate",
-          meta: { label: "範例", icon: "info", hide: true },
+          meta: { label: "範例", icon: "info", hide: true, backIcon: true },
         },
       ],
     },

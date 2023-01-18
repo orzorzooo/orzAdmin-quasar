@@ -9,6 +9,13 @@
         @click="global.sidebar.drawer = !global.sidebar.drawer"
         v-if="$q.screen.lt.md"
       />
+      <q-btn
+        icon="arrow_back"
+        round
+        @click="router.back()"
+        v-if="route.meta.backIcon"
+      ></q-btn>
+      <q-icon name="view_stream" size="3em" v-else></q-icon>
 
       <q-toolbar-title>
         <div class="q-pa-md">
@@ -23,18 +30,9 @@
   </q-header>
 </template>
 <script setup>
-import { useRoute } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import { globalStore } from "@/stores/global";
-import { ref } from "vue";
 const route = useRoute();
-const leftDrawerOpen = ref(false);
-const mini = ref(false);
+const router = useRouter();
 const global = globalStore();
-function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
-}
-function drawerClick(e) {
-  mini.value = false;
-  // e.stopPropagation();
-}
 </script>
