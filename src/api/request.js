@@ -6,7 +6,11 @@ import { globalStore } from "@/stores/global";
 
 // 取pinia的全域
 
-export const get = async ({ type = "items", collection = "", params = { fields: "*,files.*", meta: "" } }) => {
+export const get = async ({
+  type = "items",
+  collection = "",
+  params = { fields: "*,files.*", meta: "" },
+}) => {
   const token = localStorage.getItem(`${import.meta.env.VITE_TOKEN_ID}`);
   console.log("get token", token);
   if (token) {
@@ -15,9 +19,12 @@ export const get = async ({ type = "items", collection = "", params = { fields: 
     axios.defaults.headers.common["Authorization"] = ``;
   }
   try {
-    const { data, status } = await axios.get(`${BASEURL}/${type}/${collection}`, {
-      params,
-    });
+    const { data, status } = await axios.get(
+      `${BASEURL}/${type}/${collection}`,
+      {
+        params,
+      }
+    );
     onSuccess(data, status);
     if (params.meta != "") {
       return data;
@@ -30,7 +37,11 @@ export const get = async ({ type = "items", collection = "", params = { fields: 
   }
 };
 
-export const post = async ({ data: inpudata = null, type = "items", collection = "" }) => {
+export const post = async ({
+  data: inpudata = null,
+  type = "items",
+  collection = "",
+}) => {
   const token = localStorage.getItem(`${import.meta.env.VITE_TOKEN_ID}`);
   if (token) {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
@@ -39,7 +50,10 @@ export const post = async ({ data: inpudata = null, type = "items", collection =
   }
   console.log("fuck", token);
   try {
-    const { data, status } = await axios.post(`${BASEURL}/${type}/${collection}`, inpudata);
+    const { data, status } = await axios.post(
+      `${BASEURL}/${type}/${collection}`,
+      inpudata
+    );
     onSuccess(data, status);
     return data.data;
   } catch (error) {
@@ -50,13 +64,43 @@ export const post = async ({ data: inpudata = null, type = "items", collection =
 };
 
 // for directus 會回傳一個圖片asset用的url
-export const assetURL = (assetID, params = { quality: null, width: null, transforms: null }) => {
+export const assetURL = (
+  assetID,
+  params = { quality: null, width: null, transforms: null }
+) => {
   // quality=${params.quality}&width=${params.width}
   const quality = params.quality ? `quality=${params.quality}` : "";
   const width = params.width ? `&width=${params.width}` : "";
-  const transforms = params.transforms ? `&transforms=${params.transforms}` : [];
+  const transforms = params.transforms
+    ? `&transforms=${params.transforms}`
+    : [];
   return `${BASEURL}/assets/${assetID}?${quality}${width}${transforms}`;
 };
+
+export const del = async ({ type = "items", collection = "", ids = [] }) => {
+  await handleToken();
+  try {
+    const { status } = await axios.delete(`${BASEURL}/${type}/${collection}`, {
+      data: ids,
+    });
+    onSuccess("Delete Success", status);
+    if (status != 204) throw Error;
+    return true;
+  } catch (error) {
+    handleErrorMsg(error.response.status);
+    return false;
+  }
+};
+
+async function handleToken() {
+  const token = localStorage.getItem(`${import.meta.env.VITE_TOKEN_ID}`);
+  if (token) {
+    axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+  } else {
+    axios.defaults.headers.common["Authorization"] = ``;
+  }
+}
+
 function onSuccess(data, status) {
   console.log(
     `%cGET ${status}`,
