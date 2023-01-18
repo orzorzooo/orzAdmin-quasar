@@ -1,9 +1,25 @@
 <template>
   <div>
     <orzHeader>
-      <div class="text-lg font-bold uppercase">{{ items ? items.meta.total_count : 0 }} Items</div>
-      <q-btn flat round dense icon="delete_outline" size="lg" v-if="selected.length" />
-      <q-btn flat round dense icon="add_circle" size="lg" @click="router.push({ name: 'ExampleCreate' })" />
+      <div class="text-lg font-bold uppercase">
+        {{ items ? items.meta.total_count : 0 }} Items
+      </div>
+      <q-btn
+        flat
+        round
+        dense
+        icon="delete_outline"
+        size="lg"
+        v-if="selected.length"
+      />
+      <q-btn
+        flat
+        round
+        dense
+        icon="add_circle"
+        size="lg"
+        @click="router.push({ name: 'ExampleCreate' })"
+      />
     </orzHeader>
     <q-table
       flat
@@ -24,7 +40,7 @@ import { date } from "quasar";
 import { useRouter } from "vue-router";
 import orzHeader from "@/layouts/user/components/header.vue";
 
-const collection = "foodar";
+const collection = "example";
 
 const router = useRouter();
 const items = ref(null);

@@ -32,5 +32,37 @@
       }
     ],
     "tests": []
+  },
+  {
+    "_id": "d6361186-cbb7-4220-9125-7daccfb7dd28",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{url}}/permission",
+    "url": "{{url}}/permission",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-18T01:31:47.810Z",
+    "modified": "2023-01-18T01:31:47.810Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "61a7b280-4e57-45f7-9e4d-2bde65ddf9cf",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{url}}/permissions",
+    "url": "{{url}}/permissions",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-01-18T01:31:50.595Z",
+    "modified": "2023-01-18T01:32:05.802Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZjODMyZTE5LTM0MGUtNDA1YS05M2JiLTQ4NjJjM2ZkZTYwNSIsInJvbGUiOiJlNjMwOWE5ZS0wZjE4LTQ3MTUtYWFhZi0zMDM4M2M4MGQ3NjEiLCJhcHBfYWNjZXNzIjoxLCJhZG1pbl9hY2Nlc3MiOjAsImlhdCI6MTY3NDAwNDA5NiwiZXhwIjoxNjc0MDA3Njk2LCJpc3MiOiJkaXJlY3R1cyJ9.bXyiClP2lUJn5c42i4hp3u74dlG6naxA2OypflvXfSY"
+    },
+    "tests": []
   }
 ]

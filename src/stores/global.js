@@ -5,6 +5,10 @@ export const globalStore = defineStore("global", {
     title: "",
     text: "",
     show: false,
+    sidebar: {
+      mini: false,
+      drawer: false,
+    },
   }),
   actions: {
     dialog() {},
