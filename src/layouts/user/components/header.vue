@@ -15,11 +15,14 @@
         @click="router.back()"
         v-if="route.meta.backIcon"
       ></q-btn>
-      <q-icon name="view_stream" size="3em" v-else></q-icon>
+      <q-btn v-else round disabled icon="bookmark"></q-btn>
+      <!-- <q-icon name="storage" size="3em" v-else></q-icon> -->
 
       <q-toolbar-title>
         <div class="q-pa-md">
-          <div class="text-gray-500 text-xs uppercase">{{ route.name }}</div>
+          <div class="text-gray-500 text-xs uppercase">
+            {{ route.meta.alias ? route.meta.alias : route.name }}
+          </div>
           <div>
             {{ route.meta.label }}
           </div>
